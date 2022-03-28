@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2><%= Group.find_by(id: session[:group]).display_name %>班<h2> 
+    <% if Group.find_by(id: session[:group]).round >= 7 %>
+      <h3>結果をまとう！</h3>
+    <% else %>
+      <h3>ちょっとまっててね</h3>
+      <a id="nextRound">ゲーム開始</a>
+    <% end %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/wait.js"></script>
+  </body>
+</html>

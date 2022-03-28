@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>あなたは<%= Group.find_by(id: session[:group]).display_name %>班<h2>
+    <h3>ラウンド<%= Group.find_by(id: session[:group]).round %></h3>
+    <h3>どっちが勝ちと予想？</h3>
+    <a id="a">A</a>
+    <a id="b">B</a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/round.js"></script>
+  </body>
+</html>
